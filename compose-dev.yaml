@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  app:
+    build: .
+    volumes:
+      - .:/django-app
+    ports:
+      - 8000:8000
+    image: django02draft_img:1.0
+    container_name: django02draft_container
+    command: bash -c "python manage.py runserver 0.0.0.0:8000"
+
+
+
